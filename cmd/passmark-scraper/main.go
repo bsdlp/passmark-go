@@ -12,7 +12,7 @@ import (
 
 func main() {
 	var sessionCookie *http.Cookie
-	resp, err := http.Get("//www.cpubenchmark.net/CPU_mega_page.html")
+	resp, err := http.Get("https://www.cpubenchmark.net/CPU_mega_page.html")
 	if err != nil {
 		log.Fatalf("error getting session cookie: %s", err.Error())
 	}
@@ -32,6 +32,7 @@ func main() {
 		log.Fatalf("unable to call data endpoint: %s", err.Error())
 	}
 	req.AddCookie(sessionCookie)
+	req.Header.Set("x-requested-with", "XMLHttpRequest")
 
 	resp, err = http.DefaultClient.Do(req)
 	if err != nil {

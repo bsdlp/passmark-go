@@ -32,29 +32,29 @@ package passmark
 	}
 */
 type CPU struct {
-	ID                string `json:"id"`
-	Name              string `json:"name"`
-	Price             string `json:"price"`
-	Cpumark           string `json:"cpumark"`
-	Thread            string `json:"thread"`
-	Value             string `json:"value"`
-	ThreadValue       string `json:"threadValue"`
-	TDP               string `json:"tdp"`
-	PowerPerf         string `json:"powerPerf"`
-	Date              string `json:"date"`
-	Socket            string `json:"socket"`
-	Cat               string `json:"cat"`
-	Speed             string `json:"speed"`
-	Turbo             string `json:"turbo"`
-	CPUCount          int    `json:"cpuCount"`
-	Cores             string `json:"cores"`
-	Logicals          string `json:"logicals"`
-	SecondaryCores    string `json:"secondaryCores"`
-	SecondaryLogicals string `json:"secondaryLogicals"`
-	Rank              int    `json:"rank"`
-	Samples           string `json:"samples"`
-	Href              string `json:"href"`
-	Output            bool   `json:"output"`
+	ID                string      `json:"id"`
+	Name              string      `json:"name"`
+	Price             string      `json:"price"`
+	Cpumark           string      `json:"cpumark"`
+	Thread            string      `json:"thread"`
+	Value             string      `json:"value"`
+	ThreadValue       string      `json:"threadValue"`
+	TDP               string      `json:"tdp"`
+	PowerPerf         string      `json:"powerPerf"`
+	Date              string      `json:"date"`
+	Socket            string      `json:"socket"`
+	Cat               string      `json:"cat"`
+	Speed             string      `json:"speed"`
+	Turbo             string      `json:"turbo"`
+	CPUCount          interface{} `json:"cpuCount"`
+	Cores             string      `json:"cores"`
+	Logicals          string      `json:"logicals"`
+	SecondaryCores    interface{} `json:"secondaryCores"`
+	SecondaryLogicals interface{} `json:"secondaryLogicals"`
+	Rank              int         `json:"rank"`
+	Samples           interface{} `json:"samples"`
+	Href              string      `json:"href"`
+	Output            bool        `json:"output"`
 }
 
 func (cpu *CPU) Link() string {
